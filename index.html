@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Franco Frías Maier | Desarrollador Front-End &amp; Diseñador UX/UI</title>
+    <meta
+      name="description"
+      content="Portfolio de Franco Frías Maier, estudiante de Sistemas de Información. Desarrollo Front-End y diseño UX/UI: experiencias digitales eficientes, escalables y accesibles."
+    />
+    <meta name="theme-color" content="#0B0F19" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:title" content="Franco Frías Maier | Front-End &amp; UX/UI" />
+    <meta
+      property="og:description"
+      content="Creando experiencias digitales eficientes, escalables y accesibles. Mirá mis proyectos y casos de estudio."
+    />
+    <meta property="og:image" content="https://francofriass.github.io/tp_final/assets/img/og-image.png" />
+    <meta property="og:url" content="https://francofriass.github.io/tp_final/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+    <!-- Fonts: 2 families max, font-display: swap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind compiled with the CLI (npm run build) -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body>
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+    <!-- 1. HEADER / NAVEGACIÓN -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-bg/80 backdrop-blur-md">
+      <nav
+        class="container-page relative flex h-[4.5rem] items-center justify-between"
+        aria-label="Navegación principal"
+      >
+        <a
+          href="#inicio"
+          class="font-display text-2xl font-bold tracking-tight text-ink hover:text-accent"
+          aria-label="Franco Frías Maier, ir al inicio"
+        >
+          <span class="text-primary-soft">F</span>F
+        </a>
+
+        <button
+          type="button"
+          id="menu-toggle"
+          class="inline-flex h-12 w-12 items-center justify-center rounded-lg border border-white/15 text-ink hover:border-accent active:bg-white/10 md:hidden"
+          aria-expanded="false"
+          aria-controls="menu-movil"
+          aria-label="Abrir menú de navegación"
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path id="icon-open" d="M4 7h16M4 12h16M4 17h16" />
+            <path id="icon-close" class="hidden" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+
+        <div
+          id="menu-movil"
+          class="hidden flex flex-col gap-4 border-b border-white/10 bg-bg/95 p-4 backdrop-blur-md absolute inset-x-0 top-full md:static md:flex md:flex-row md:items-center md:gap-2 md:border-0 md:bg-transparent md:p-0 md:backdrop-blur-none"
+        >
+          <ul class="flex flex-col gap-1 md:flex-row md:items-center">
+            <li><a class="nav-link block" href="#skills">Skills</a></li>
+            <li><a class="nav-link block" href="#proyectos">Proyectos</a></li>
+            <li><a class="nav-link block" href="#experiencia">Experiencia</a></li>
+            <li><a class="nav-link block" href="#sobre-mi">Sobre mí</a></li>
+          </ul>
+          <div class="flex flex-col gap-3 md:ml-2 md:flex-row md:items-center">
+            <a
+              class="btn btn-secondary !min-h-[44px] !px-4 !py-2 text-sm"
+              href="https://github.com/francofriass"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+            >
+            <a class="btn btn-primary !min-h-[44px] !px-4 !py-2 text-sm" href="#contacto">Contacto</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <!-- 2. HERO -->
+      <section id="inicio" class="relative overflow-hidden section-pad" aria-labelledby="hero-title">
+        <div
+          class="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-primary/25 blur-3xl md:h-96 md:w-96"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="pointer-events-none absolute bottom-0 left-0 h-56 w-56 rounded-full bg-accent/10 blur-3xl"
+          aria-hidden="true"
+        ></div>
+
+        <div class="container-page relative">
+          <p
+            class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-300"
+          >
+            <span class="relative flex h-2.5 w-2.5" aria-hidden="true">
+              <span
+                class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 motion-safe:animate-ping"
+              ></span>
+              <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+            </span>
+            Disponible para trabajar
+          </p>
+
+          <h1
+            id="hero-title"
+            class="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-ink md:text-6xl"
+          >
+            Franco Frías Maier
+            <span class="mt-2 block bg-gradient-to-r from-primary-soft to-accent bg-clip-text text-transparent">
+              Desarrollador Front-End &amp; Diseñador UX/UI
+            </span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg text-muted md:text-xl">
+            Creando experiencias digitales eficientes, escalables y accesibles.<br class="hidden md:inline" />
+            Apasionado por la resolución de problemas y el diseño centrado en el usuario.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-secondary" href="#contacto">Contactar</a>
+          </div>
+
+          <p class="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+            <span>Concepción del Uruguay, Argentina</span>
+            <span aria-hidden="true">·</span>
+            <span>Zona horaria: UTC-3</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. MÉTRICAS -->
+      <section id="metricas" class="pb-16 md:pb-24" aria-labelledby="metricas-title">
+        <div class="container-page">
+          <h2 id="metricas-title" class="sr-only">Highlights</h2>
+          <ul class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <li class="card text-center">
+              <p class="font-display text-5xl font-bold text-ink">2</p>
+              <p class="mt-2 text-muted">Años en Sistemas</p>
+            </li>
+            <li class="card text-center">
+              <p class="font-display text-5xl font-bold text-ink">+4</p>
+              <p class="mt-2 text-muted">Proyectos académicos</p>
+            </li>
+            <li class="card text-center">
+              <p class="font-display text-5xl font-bold text-ink">+5</p>
+              <p class="mt-2 text-muted">Tecnologías dominadas</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4. SKILLS -->
+      <section id="skills" class="section-pad" aria-labelledby="skills-title">
+        <div class="container-page">
+          <p class="eyebrow">Skills</p>
+          <h2 id="skills-title" class="section-title">Lo que sé hacer</h2>
+          <p class="section-lead">Del diseño de la interfaz a su implementación en código.</p>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="card card-hover">
+              <h3 class="text-xl font-bold">Diseño UX/UI</h3>
+              <p class="mt-2 text-muted">Diseño de interfaces claras, partiendo de la estructura de la información.</p>
+              <ul class="mt-5 flex flex-wrap gap-2" aria-label="Herramientas de diseño UX/UI">
+                <li class="chip">Figma</li>
+                <li class="chip">Prototipado</li>
+                <li class="chip">Wireframing</li>
+                <li class="chip">Arquitectura de Información</li>
+              </ul>
+            </article>
+
+            <article class="card card-hover">
+              <h3 class="text-xl font-bold">Desarrollo Front-End</h3>
+              <p class="mt-2 text-muted">Maquetado semántico, responsive y accesible, con código mantenible.</p>
+              <ul class="mt-5 flex flex-wrap gap-2" aria-label="Tecnologías de Front-End">
+                <li class="chip">HTML5</li>
+                <li class="chip">CSS3</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">JavaScript</li>
+              </ul>
+            </article>
+
+            <article class="card card-hover">
+              <h3 class="text-xl font-bold">Herramientas</h3>
+              <p class="mt-2 text-muted">Flujo de trabajo para versionar, construir y publicar proyectos.</p>
+              <ul class="mt-5 flex flex-wrap gap-2" aria-label="Herramientas de trabajo">
+                <li class="chip">Git</li>
+                <li class="chip">GitHub</li>
+                <li class="chip">VS Code</li>
+                <li class="chip">Node.js</li>
+                <li class="chip">Terminal</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. PROYECTOS -->
+      <section id="proyectos" class="section-pad" aria-labelledby="proyectos-title">
+        <div class="container-page">
+          <p class="eyebrow">Proyectos</p>
+          <h2 id="proyectos-title" class="section-title">Trabajos seleccionados</h2>
+          <p class="section-lead">Tres proyectos académicos. El primero cuenta con su caso de estudio completo.</p>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <!-- Proyecto 1 (caso de estudio en sub-página) -->
+            <article class="card card-hover group relative flex flex-col overflow-hidden !p-0">
+              <img
+                src="assets/img/project-cubri-seguros.webp"
+                alt="Mockup de la plataforma Cubrí Seguros (imagen provisoria)"
+                width="800"
+                height="500"
+                loading="lazy"
+                decoding="async"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <div class="flex flex-1 flex-col p-6">
+                <p class="text-sm font-medium text-accent">2026 · Caso de estudio</p>
+                <h3 class="mt-1 text-xl font-bold">
+                  <a
+                    href="caso-estudio.html"
+                    class="after:absolute after:inset-0 after:content-[''] hover:text-primary-soft"
+                    >Cubrí Seguros</a
+                  >
+                </h3>
+                <p class="mt-2 text-muted">
+                  Plataforma web para la visualización y gestión de pólizas de seguros.
+                </p>
+                <p class="mt-3 text-sm text-muted">
+                  <strong class="font-semibold text-ink">Resultado:</strong> interfaz accesible y de carga rápida,
+                  desplegada en Netlify.
+                </p>
+                <ul class="mt-4 flex flex-wrap gap-2" aria-label="Herramientas usadas">
+                  <li class="chip">HTML</li>
+                  <li class="chip">CSS</li>
+                  <li class="chip">JavaScript</li>
+                  <li class="chip">Netlify</li>
+                </ul>
+                <p class="mt-5 flex items-center gap-4 text-sm font-semibold">
+                  <span class="text-primary-soft">Ver caso de estudio →</span>
+                  <a
+                    class="relative z-10 text-accent underline underline-offset-4 hover:text-ink"
+                    href="https://cubri-seguros-franco.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ver demo<span class="sr-only"> de Cubrí Seguros (se abre en una pestaña nueva)</span></a
+                  >
+                </p>
+              </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="card card-hover group relative flex flex-col overflow-hidden !p-0">
+              <img
+                src="assets/img/project-coffea.webp"
+                alt="Mockup de la landing page de Coffea (imagen provisoria)"
+                width="800"
+                height="500"
+                loading="lazy"
+                decoding="async"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <div class="flex flex-1 flex-col p-6">
+                <p class="text-sm font-medium text-accent">2026</p>
+                <h3 class="mt-1 text-xl font-bold">
+                  <!-- TODO: reemplazar por la URL de la demo (Netlify) o del repo de Coffea -->
+                  <a
+                    href="https://github.com/francofriass"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="after:absolute after:inset-0 after:content-[''] hover:text-primary-soft"
+                    >Coffea Landing Page<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+                  >
+                </h3>
+                <p class="mt-2 text-muted">
+                  Landing page responsiva diseñada y desarrollada con un enfoque estricto en accesibilidad y
+                  performance.
+                </p>
+                <p class="mt-3 text-sm text-muted">
+                  <strong class="font-semibold text-ink">Aprendizaje:</strong> aplicar accesibilidad y performance
+                  desde el diseño.
+                </p>
+                <ul class="mt-4 flex flex-wrap gap-2" aria-label="Herramientas usadas">
+                  <li class="chip">HTML</li>
+                  <li class="chip">CSS</li>
+                  <li class="chip">Flexbox/Grid</li>
+                  <li class="chip">Netlify</li>
+                </ul>
+                <p class="mt-5 text-sm font-semibold text-primary-soft">Ver proyecto →</p>
+              </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="card card-hover group relative flex flex-col overflow-hidden !p-0">
+              <img
+                src="assets/img/project-helpdesk.webp"
+                alt="Mockup del sistema Mesa de Ayuda (imagen provisoria)"
+                width="800"
+                height="500"
+                loading="lazy"
+                decoding="async"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <div class="flex flex-1 flex-col p-6">
+                <p class="text-sm font-medium text-accent">2026</p>
+                <h3 class="mt-1 text-xl font-bold">
+                  <!-- TODO: reemplazar por la URL del repo de Mesa de Ayuda -->
+                  <a
+                    href="https://github.com/francofriass"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="after:absolute after:inset-0 after:content-[''] hover:text-primary-soft"
+                    >Mesa de Ayuda (Helpdesk)<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+                  >
+                </h3>
+                <p class="mt-2 text-muted">
+                  Sistema web full-stack para la gestión y seguimiento de tickets de soporte técnico.
+                </p>
+                <p class="mt-3 text-sm text-muted">
+                  <strong class="font-semibold text-ink">Aprendizaje:</strong> integrar un backend con Node.js y
+                  Express con persistencia en AWS DynamoDB.
+                </p>
+                <ul class="mt-4 flex flex-wrap gap-2" aria-label="Herramientas usadas">
+                  <li class="chip">Node.js</li>
+                  <li class="chip">Express</li>
+                  <li class="chip">HTML/CSS</li>
+                  <li class="chip">AWS DynamoDB</li>
+                </ul>
+                <p class="mt-5 text-sm font-semibold text-primary-soft">Ver proyecto →</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. EXPERIENCIA / FORMACIÓN -->
+      <section id="experiencia" class="section-pad" aria-labelledby="experiencia-title">
+        <div class="container-page">
+          <p class="eyebrow">Experiencia y formación</p>
+          <h2 id="experiencia-title" class="section-title">Mi recorrido</h2>
+
+          <ol class="timeline mt-10">
+            <li class="timeline-item">
+              <p class="text-sm font-semibold text-accent">2025 – Actualidad</p>
+              <h3 class="mt-1 text-xl font-bold">Licenciatura en Sistemas de Información</h3>
+              <p class="text-muted">FCyT UADER</p>
+              <ul class="mt-3 list-disc space-y-1 pl-5 text-muted marker:text-primary-soft">
+                <li>Promoción de materias troncales de algoritmos y cálculo.</li>
+                <li>Desarrollo de software en equipos de trabajo.</li>
+              </ul>
+            </li>
+            <li class="timeline-item">
+              <p class="text-sm font-semibold text-accent">2026</p>
+              <h3 class="mt-1 text-xl font-bold">Curso de Ciberseguridad y Redes</h3>
+              <p class="text-muted">Cisco Networking Academy</p>
+              <ul class="mt-3 list-disc space-y-1 pl-5 text-muted marker:text-primary-soft">
+                <li>Prácticas de simulación de redes.</li>
+                <li>Análisis de protocolos y tráfico.</li>
+              </ul>
+            </li>
+            <li class="timeline-item">
+              <p class="text-sm font-semibold text-accent">Abril 2025</p>
+              <h3 class="mt-1 text-xl font-bold">41º Jornadas Argentinas de Informática (JoSEII)</h3>
+              <p class="text-muted">Asistente</p>
+              <ul class="mt-3 list-disc space-y-1 pl-5 text-muted marker:text-primary-soft">
+                <li>Participación en talleres de actualización tecnológica.</li>
+                <li>Networking académico.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 7. SOBRE MÍ -->
+      <section id="sobre-mi" class="section-pad" aria-labelledby="sobre-title">
+        <div class="container-page">
+          <div class="grid items-center gap-10 md:grid-cols-[2fr_1fr]">
+            <div>
+              <p class="eyebrow">Sobre mí</p>
+              <h2 id="sobre-title" class="section-title">Hola, soy Franco</h2>
+              <p class="mt-4 max-w-2xl text-base text-muted md:text-lg">
+                Soy Franco, estudiante de 2do año de la Licenciatura en Sistemas de Información. Me especializo en el
+                desarrollo web y el diseño de interfaces, disfrutando del proceso de resolver problemas complejos
+                dividiéndolos paso a paso. Siempre busco aprender nuevas tecnologías mediante la práctica y el
+                debugging de código.
+              </p>
+            </div>
+            <img
+              src="assets/img/profile-placeholder.webp"
+              alt="Retrato de Franco Frías Maier - Placeholder"
+              width="600"
+              height="750"
+              loading="lazy"
+              decoding="async"
+              class="mx-auto w-full max-w-xs rounded-2xl border border-white/10 object-cover md:order-last"
+            />
+          </div>
+
+          <ul class="mt-12 grid gap-6 md:grid-cols-3">
+            <li class="card card-hover">
+              <h3 class="text-lg font-bold">Resolución paso a paso</h3>
+              <p class="mt-2 text-muted">
+                Descomponer problemas complejos para construir soluciones lógicas y sólidas.
+              </p>
+            </li>
+            <li class="card card-hover">
+              <h3 class="text-lg font-bold">Aprendizaje práctico</h3>
+              <p class="mt-2 text-muted">Aprender haciendo, priorizando la escritura de código y el debugging activo.</p>
+            </li>
+            <li class="card card-hover">
+              <h3 class="text-lg font-bold">Diseño centrado</h3>
+              <p class="mt-2 text-muted">
+                Crear interfaces que no solo se vean bien, sino que sean intuitivas y accesibles.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 8. CONTACTO -->
+      <section id="contacto" class="section-pad" aria-labelledby="contacto-title">
+        <div class="container-page">
+          <div
+            class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-primary/30 via-card to-card p-8 text-center md:p-14"
+          >
+            <p class="eyebrow">Contacto</p>
+            <h2 id="contacto-title" class="mx-auto max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+              ¿Tenés un proyecto en mente o querés sumar un perfil proactivo a tu equipo? Hablemos.
+            </h2>
+            <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a class="btn btn-primary" href="mailto:satrimtf@gmail.com">satrimtf@gmail.com</a>
+              <!-- TODO: reemplazar por la URL real del perfil de LinkedIn -->
+              <a
+                class="btn btn-secondary"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+              >
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/francofriass"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 9. FOOTER -->
+    <footer class="border-t border-white/10 py-10">
+      <div class="container-page flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+        <div>
+          <p class="font-display text-xl font-bold"><span class="text-primary-soft">F</span>F</p>
+          <p class="mt-2 text-sm text-muted">© 2026 Franco Frías Maier. Todos los derechos reservados.</p>
+          <p class="mt-1 text-sm text-muted">Desarrollado con HTML/CSS</p>
+        </div>
+
+        <nav aria-label="Navegación del pie de página">
+          <ul class="flex flex-wrap gap-x-2 gap-y-1">
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li><a class="nav-link" href="#experiencia">Experiencia</a></li>
+            <li><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+            <li><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <ul class="flex gap-2" aria-label="Redes sociales">
+          <li>
+            <a
+              class="nav-link"
+              href="https://github.com/francofriass"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+            >
+          </li>
+          <li>
+            <!-- TODO: reemplazar por la URL real del perfil de LinkedIn -->
+            <a class="nav-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+              >LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
