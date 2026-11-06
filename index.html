@@ -30,7 +30,15 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- Tailwind compiled with the CLI (npm run build) -->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -102,15 +110,7 @@
 
     <main id="contenido">
       <!-- 2. HERO -->
-      <section id="inicio" class="relative overflow-hidden section-pad" aria-labelledby="hero-title">
-        <div
-          class="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-primary/25 blur-3xl md:h-96 md:w-96"
-          aria-hidden="true"
-        ></div>
-        <div
-          class="pointer-events-none absolute bottom-0 left-0 h-56 w-56 rounded-full bg-accent/10 blur-3xl"
-          aria-hidden="true"
-        ></div>
+      <section id="inicio" class="hero-glow section-pad" aria-labelledby="hero-title">
 
         <div class="container-page relative">
           <p

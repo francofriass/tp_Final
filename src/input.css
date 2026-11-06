@@ -81,6 +81,16 @@
     @apply py-16 md:py-24;
   }
 
+  .hero-glow {
+    background-image: radial-gradient(
+        40rem 24rem at 100% 0%,
+        rgb(124 58 237 / 0.22),
+        transparent 70%
+      ),
+      radial-gradient(28rem 20rem at 0% 100%, rgb(56 189 248 / 0.1), transparent 70%);
+    background-repeat: no-repeat;
+  }
+
   .eyebrow {
     @apply mb-3 text-sm font-semibold uppercase tracking-widest text-accent;
   }
