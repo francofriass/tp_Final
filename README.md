@@ -129,6 +129,19 @@ El código y el contenido fueron **revisados y adaptados manualmente** por el au
 - [ ] Imágenes placeholder reemplazadas por material real
 - [ ] URL de LinkedIn y links de Coffea y Mesa de Ayuda completados (`TODO` en `index.html`)
 
+## Resultados de Lighthouse (mobile)
+
+Medición **local** sobre `index.html` (Lighthouse CLI, Chrome headless, servidor sin compresión):
+
+| Categoría | Puntaje |
+| --- | --- |
+| Performance | 87 (calibrado) |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+> Nota: la máquina de desarrollo es de gama baja (Pentium N3710, `benchmarkIndex` 450). Con el throttling por defecto (CPU 4×) Lighthouse dio Performance 68 por el tiempo de _Style & Layout_, y con `--throttling.cpuSlowdownMultiplier=2` (calibración para este hardware) dio 87 con TBT de 0 ms. La captura oficial para la entrega debe tomarse sobre **la URL desplegada** (GitHub Pages sirve con compresión y HTTP/2) y/o en PageSpeed Insights. Si no llega a 90, los siguientes candidatos son self-hostear las fuentes y reducir el CLS por el cambio de fuente.
+
 ## Feedback de revisión entre pares
 
 _(Pendiente. Completar con las observaciones de los compañeros y los cambios aplicados.)_
