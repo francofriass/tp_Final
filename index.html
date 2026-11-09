@@ -103,72 +103,65 @@
     </header>
 
 <main id="contenido">
-      <!-- 2. HERO -->
-      <section id="inicio" class="hero-glow section-pad" aria-labelledby="hero-title">
-
-        <div class="container-page relative">
+            <!-- 2. HERO -->
+      <section id="inicio" class="hero-glow pb-8 pt-12 md:pb-12 md:pt-[88px]" aria-labelledby="hero-title">
+        <div class="container-page relative flex flex-col items-start gap-6">
           <p
-            class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-300"
+            class="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-success/10 px-5 text-base text-success"
           >
-            <span class="relative flex h-2.5 w-2.5" aria-hidden="true">
+            <span class="relative flex h-2 w-2" aria-hidden="true">
               <span
-                class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 motion-safe:animate-ping"
+                class="absolute inline-flex h-full w-full rounded-full bg-success opacity-75 motion-safe:animate-ping"
               ></span>
-              <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-success"></span>
             </span>
             Disponible para trabajar
           </p>
 
-          <h1
-            id="hero-title"
-            class="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-ink md:text-6xl"
-          >
+          <h1 id="hero-title" class="font-display text-[60px] font-bold text-ink" style="line-height: 1.2">
             Franco Frías Maier
-            <span class="mt-2 block bg-gradient-to-r from-primary-soft to-accent bg-clip-text text-transparent">
-              Desarrollador Front-End &amp; Diseñador UX/UI
-            </span>
           </h1>
 
-          <p class="mt-6 max-w-2xl text-lg text-muted md:text-xl">
-            Creando experiencias digitales eficientes, escalables y accesibles.<br class="hidden md:inline" />
-            Apasionado por la resolución de problemas y el diseño centrado en el usuario.
+          <p class="bg-gradient-to-r from-primary-soft to-accent bg-clip-text text-xl text-transparent">
+            Desarrollador Front-End &amp; Diseñador UX/UI
           </p>
 
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <p class="max-w-[760px] text-xl text-muted">
+            Creando experiencias digitales eficientes, escalables y accesibles. Apasionado por la resolución de
+            problemas y el diseño centrado en el usuario.
+          </p>
+
+          <div class="flex w-full flex-col gap-3 md:w-auto md:flex-row">
             <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
             <a class="btn btn-secondary" href="#contacto">Contactar</a>
           </div>
 
-          <p class="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
-            <span>Concepción del Uruguay, Argentina</span>
-            <span aria-hidden="true">·</span>
-            <span>Zona horaria: UTC-3</span>
-          </p>
+          <p class="text-base text-muted">Concepción del Uruguay, Argentina · Zona horaria: UTC-3</p>
         </div>
       </section>
 
       <!-- 3. MÉTRICAS -->
-      <section id="metricas" class="pb-16 md:pb-24" aria-labelledby="metricas-title">
+      <section id="metricas" class="section-pad" aria-labelledby="metricas-title">
         <div class="container-page">
-          <h2 id="metricas-title" class="sr-only">Highlights</h2>
-          <ul class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <li class="card text-center">
-              <p class="font-display text-5xl font-bold text-ink">2</p>
-              <p class="mt-2 text-muted">Años en Sistemas</p>
+          <h2 id="metricas-title" class="sr-only">Métricas</h2>
+          <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <li class="card flex flex-col gap-2 border-white/10">
+              <p class="font-display text-5xl font-bold text-ink" style="line-height: 1.2">2</p>
+              <p class="text-base text-muted">Años en Sistemas</p>
             </li>
-            <li class="card text-center">
-              <p class="font-display text-5xl font-bold text-ink">+4</p>
-              <p class="mt-2 text-muted">Proyectos académicos</p>
+            <li class="card flex flex-col gap-2 border-white/10">
+              <p class="font-display text-5xl font-bold text-ink" style="line-height: 1.2">+4</p>
+              <p class="text-base text-muted">Proyectos académicos</p>
             </li>
-            <li class="card text-center">
-              <p class="font-display text-5xl font-bold text-ink">+5</p>
-              <p class="mt-2 text-muted">Tecnologías dominadas</p>
+            <li class="card flex flex-col gap-2 border-white/10">
+              <p class="font-display text-5xl font-bold text-ink" style="line-height: 1.2">+5</p>
+              <p class="text-base text-muted">Tecnologías dominadas</p>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- 4. SKILLS -->
+<!-- 4. SKILLS -->
       <section id="skills" class="section-pad" aria-labelledby="skills-title">
         <div class="container-page">
           <p class="eyebrow">Skills</p>
