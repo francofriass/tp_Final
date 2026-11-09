@@ -230,4 +230,17 @@
       transform: none;
     }
   }
+
+  /* Project screenshots: muted until the card is hovered or focused (mouse devices only, no reduced motion) */
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .project-img {
+      filter: brightness(0.8) saturate(0.6);
+      transition: filter 300ms ease-out, transform 300ms ease-out;
+    }
+    .project-card:hover .project-img,
+    .project-card:focus-within .project-img {
+      filter: none;
+      transform: scale(1.04);
+    }
+  }
 }
