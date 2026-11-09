@@ -64,3 +64,46 @@
     });
   }).observe(badge);
 })();
+
+// Microinteraction 3: 3D tilt on the About portrait (mouse devices, no reduced motion).
+(function () {
+  var img = document.querySelector('.tilt-img');
+  if (!img) return;
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var MAX = 8; // degrees per axis
+  var rect = null;
+  var frame = 0;
+  var rx = 0;
+  var ry = 0;
+
+  function paint() {
+    frame = 0;
+    img.style.transform =
+      'perspective(800px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg) translateY(-6px)';
+  }
+
+  img.addEventListener('pointerenter', function (e) {
+    if (e.pointerType !== 'mouse') return;
+    rect = img.getBoundingClientRect();
+    img.classList.add('is-tilting');
+  });
+
+  img.addEventListener('pointermove', function (e) {
+    if (e.pointerType !== 'mouse' || !rect) return;
+    var x = (e.clientX - rect.left) / rect.width - 0.5;
+    var y = (e.clientY - rect.top) / rect.height - 0.5;
+    ry = Math.max(-MAX, Math.min(MAX, x * 2 * MAX));
+    rx = Math.max(-MAX, Math.min(MAX, -y * 2 * MAX));
+    if (!frame) frame = requestAnimationFrame(paint);
+  });
+
+  img.addEventListener('pointerleave', function () {
+    if (frame) cancelAnimationFrame(frame);
+    frame = 0;
+    rect = null;
+    img.classList.remove('is-tilting');
+    img.style.transform = '';
+  });
+})();
