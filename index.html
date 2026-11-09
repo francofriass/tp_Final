@@ -324,7 +324,7 @@
         </div>
       </section>
 
-            <!-- 6. EXPERIENCIA / FORMACIÓN -->
+      <!-- 6. EXPERIENCIA / FORMACIÓN -->
       <section id="experiencia" class="section-pad" aria-labelledby="experiencia-title">
         <div class="container-page">
           <div class="section-head">
@@ -406,31 +406,26 @@
         </div>
       </section>
 
-<!-- 8. CONTACTO -->
+      <!-- 8. CONTACTO -->
       <section id="contacto" class="section-pad" aria-labelledby="contacto-title">
         <div class="container-page">
           <div
-            class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-primary/30 via-card to-card p-8 text-center md:p-14"
+            class="flex flex-col items-center gap-6 rounded-3xl border border-white/[0.08] bg-gradient-to-r from-primary/30 to-card p-6 text-center md:p-16"
           >
-            <p class="eyebrow">Contacto</p>
-            <h2 id="contacto-title" class="mx-auto max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+            <p class="eyebrow !mb-0">Contacto</p>
+            <h2
+              id="contacto-title"
+              class="max-w-[880px] font-display text-[28px] font-bold md:text-4xl"
+              style="line-height: 1.4"
+            >
               ¿Tenés un proyecto en mente o querés sumar un perfil proactivo a tu equipo? Hablemos.
             </h2>
-            <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div class="flex w-full flex-col items-stretch justify-center gap-3 md:w-auto md:flex-row">
               <a class="btn btn-primary" href="mailto:satrimtf@gmail.com">satrimtf@gmail.com</a>
-              <!-- TODO: reemplazar por la URL real del perfil de LinkedIn -->
-              <a
-                class="btn btn-secondary"
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/franco-fr%C3%ADas-maier-2a9626436/" target="_blank" rel="noopener noreferrer"
                 >LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a
               >
-              <a
-                class="btn btn-secondary"
-                href="https://github.com/francofriass"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="btn btn-secondary" href="https://github.com/francofriass" target="_blank" rel="noopener noreferrer"
                 >GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span></a
               >
             </div>
@@ -440,41 +435,43 @@
     </main>
 
     <!-- 9. FOOTER -->
-    <footer class="border-t border-white/10 py-10">
+    <footer class="border-t border-white/10 pb-10 pt-8">
       <div class="container-page flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-        <div>
-          <p class="font-display text-xl font-bold"><span class="text-primary-soft">F</span>F</p>
-          <p class="mt-2 text-sm text-muted">© 2026 Franco Frías Maier. Todos los derechos reservados.</p>
-          <p class="mt-1 text-sm text-muted">Desarrollado con HTML/CSS</p>
+        <div class="flex flex-col gap-2">
+          <a
+            href="#inicio"
+            class="mb-2 w-fit rounded-lg font-display text-[32px] font-bold leading-none"
+            aria-label="Franco Frías Maier, volver al inicio"
+          >
+            <span class="text-primary-soft" aria-hidden="true">F</span><span class="text-ink" aria-hidden="true">F</span>
+          </a>
+          <p class="text-base text-muted">© 2026 Franco Frías Maier. Todos los derechos reservados.</p>
+          <p class="text-base text-muted">Hecho con HTML, Tailwind CSS y JavaScript.</p>
         </div>
 
-        <nav aria-label="Navegación del pie de página">
-          <ul class="flex flex-wrap gap-x-2 gap-y-1">
-            <li><a class="nav-link" href="#skills">Skills</a></li>
-            <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
-            <li><a class="nav-link" href="#experiencia">Experiencia</a></li>
-            <li><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-            <li><a class="nav-link" href="#contacto">Contacto</a></li>
+        <div class="flex flex-col gap-6 md:items-end">
+          <nav aria-label="Navegación del pie de página">
+            <ul class="flex flex-wrap gap-x-6 md:justify-end">
+              <li><a class="nav-link !px-0" href="#proyectos">Proyectos</a></li>
+              <li><a class="nav-link !px-0" href="#skills">Skills</a></li>
+              <li><a class="nav-link !px-0" href="#experiencia">Experiencia</a></li>
+              <li><a class="nav-link !px-0" href="#sobre-mi">Sobre mí</a></li>
+              <li><a class="nav-link !px-0" href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+          <ul class="flex gap-6 md:justify-end" aria-label="Redes sociales">
+            <li>
+              <a class="nav-link !px-0" href="https://github.com/francofriass" target="_blank" rel="noopener noreferrer"
+                >GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+              >
+            </li>
+            <li>
+              <a class="nav-link !px-0" href="https://www.linkedin.com/in/franco-fr%C3%ADas-maier-2a9626436/" target="_blank" rel="noopener noreferrer"
+                >LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+              >
+            </li>
           </ul>
-        </nav>
-
-        <ul class="flex gap-2" aria-label="Redes sociales">
-          <li>
-            <a
-              class="nav-link"
-              href="https://github.com/francofriass"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span></a
-            >
-          </li>
-          <li>
-            <!-- TODO: reemplazar por la URL real del perfil de LinkedIn -->
-            <a class="nav-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
-              >LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </footer>
 
