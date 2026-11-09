@@ -34,24 +34,24 @@
   <body>
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
-    <!-- 1. HEADER / NAVEGACIÓN -->
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-bg/80 backdrop-blur-md">
+        <!-- 1. HEADER / NAVEGACIÓN -->
+    <header class="sticky top-0 z-50 border-b border-white/[0.08] bg-bg">
       <nav
-        class="container-page relative flex h-[4.5rem] items-center justify-between"
+        class="container-page relative flex h-20 items-center justify-between md:h-[5.5rem]"
         aria-label="Navegación principal"
       >
         <a
           href="#inicio"
-          class="font-display text-2xl font-bold tracking-tight text-ink hover:text-accent"
+          class="rounded-lg font-display text-[32px] font-bold leading-none"
           aria-label="Franco Frías Maier, ir al inicio"
         >
-          <span class="text-primary-soft">F</span>F
+          <span class="text-primary-soft" aria-hidden="true">F</span><span class="text-ink" aria-hidden="true">F</span>
         </a>
 
         <button
           type="button"
           id="menu-toggle"
-          class="inline-flex h-12 w-12 items-center justify-center rounded-lg border border-white/15 text-ink hover:border-accent active:bg-white/10 md:hidden"
+          class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.08] text-ink hover:border-accent active:bg-white/10 md:hidden"
           aria-expanded="false"
           aria-controls="menu-movil"
           aria-label="Abrir menú de navegación"
@@ -73,29 +73,36 @@
 
         <div
           id="menu-movil"
-          class="hidden flex flex-col gap-4 border-b border-white/10 bg-bg/95 p-4 backdrop-blur-md absolute inset-x-0 top-full md:static md:flex md:flex-row md:items-center md:gap-2 md:border-0 md:bg-transparent md:p-0 md:backdrop-blur-none"
+          class="absolute inset-x-0 top-full hidden flex-col border-b border-white/[0.08] bg-bg px-4 pb-8 pt-6 md:static md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0"
         >
-          <ul class="flex flex-col gap-1 md:flex-row md:items-center">
-            <li><a class="nav-link block" href="#skills">Skills</a></li>
-            <li><a class="nav-link block" href="#proyectos">Proyectos</a></li>
-            <li><a class="nav-link block" href="#experiencia">Experiencia</a></li>
-            <li><a class="nav-link block" href="#sobre-mi">Sobre mí</a></li>
+          <ul class="flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
+            <li><a class="nav-link w-full justify-center" href="#proyectos">Proyectos</a></li>
+            <li><a class="nav-link w-full justify-center" href="#skills">Skills</a></li>
+            <li><a class="nav-link w-full justify-center" href="#experiencia">Experiencia</a></li>
+            <li><a class="nav-link w-full justify-center" href="#sobre-mi">Sobre mí</a></li>
           </ul>
-          <div class="flex flex-col gap-3 md:ml-2 md:flex-row md:items-center">
+          <div class="mt-6 flex flex-col gap-3 md:mt-0 md:flex-row md:items-center">
             <a
-              class="btn btn-secondary !min-h-[44px] !px-4 !py-2 text-sm"
+              class="btn btn-secondary"
               href="https://github.com/francofriass"
               target="_blank"
               rel="noopener noreferrer"
               >GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span></a
             >
-            <a class="btn btn-primary !min-h-[44px] !px-4 !py-2 text-sm" href="#contacto">Contacto</a>
+            <a class="btn btn-primary" href="#contacto">Contacto</a>
           </div>
         </div>
       </nav>
+
+      <!-- Dimmed area below the open mobile menu; tapping it closes the menu -->
+      <div
+        id="menu-overlay"
+        class="fixed inset-x-0 bottom-0 top-20 -z-10 hidden bg-[rgba(5,7,13,0.75)] md:hidden"
+        aria-hidden="true"
+      ></div>
     </header>
 
-    <main id="contenido">
+<main id="contenido">
       <!-- 2. HERO -->
       <section id="inicio" class="hero-glow section-pad" aria-labelledby="hero-title">
 

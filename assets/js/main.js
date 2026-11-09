@@ -2,6 +2,7 @@
 (function () {
   var toggle = document.getElementById('menu-toggle');
   var menu = document.getElementById('menu-movil');
+  var overlay = document.getElementById('menu-overlay');
   if (!toggle || !menu) return;
 
   var iconOpen = document.getElementById('icon-open');
@@ -12,8 +13,11 @@
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
     menu.classList.toggle('hidden', !open);
+    if (overlay) overlay.classList.toggle('hidden', !open);
     iconOpen.classList.toggle('hidden', open);
     iconClose.classList.toggle('hidden', !open);
+    // Lock page scroll while the menu is open
+    document.body.classList.toggle('overflow-hidden', open);
   }
 
   toggle.addEventListener('click', function () {
@@ -24,6 +28,9 @@
   menu.addEventListener('click', function (event) {
     if (event.target.closest('a')) setOpen(false);
   });
+
+  // Close when tapping the dimmed area
+  if (overlay) overlay.addEventListener('click', function () { setOpen(false); });
 
   // Close with Escape and return focus to the button
   document.addEventListener('keydown', function (event) {
