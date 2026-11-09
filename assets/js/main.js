@@ -45,3 +45,22 @@
     if (e.matches) setOpen(false);
   });
 })();
+
+// Microinteraction 1: availability badge slides in on load and every time it re-enters the viewport.
+(function () {
+  var badge = document.querySelector('.badge-enter');
+  if (!badge || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Hide without animating, then let the observer reveal it with the transition
+  badge.style.transition = 'none';
+  badge.classList.add('reveal-pending');
+  void badge.offsetWidth;
+  badge.style.transition = '';
+
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      badge.classList.toggle('reveal-pending', !entry.isIntersecting);
+    });
+  }).observe(badge);
+})();

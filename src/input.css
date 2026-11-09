@@ -215,4 +215,19 @@
     @apply absolute top-1 h-[15px] w-[15px] rounded-full bg-primary-soft;
     left: calc(-1 * var(--tl-gap) - 8px);
   }
+
+  /* Availability badge entrance. JS adds .reveal-pending, so without JS it is always visible. */
+  .badge-enter {
+    transition: opacity 600ms ease-out, transform 600ms ease-out;
+  }
+  .badge-enter.reveal-pending {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .badge-enter.reveal-pending {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
