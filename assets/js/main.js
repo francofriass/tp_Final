@@ -107,3 +107,58 @@
     img.style.transform = '';
   });
 })();
+
+// Contact: "Copy email" button. Injected by JS only when the Clipboard API exists, so no-JS users never see a dead button.
+(function () {
+  var block = document.querySelector('.contact-block');
+  if (!block || !navigator.clipboard || !navigator.clipboard.writeText) return;
+
+  var EMAIL = 'satrimtf@gmail.com';
+  var ICON_COPY =
+    '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>';
+  var ICON_CHECK =
+    '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"/></svg>';
+
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className =
+    '-mt-2 inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 text-base font-semibold text-accent transition-colors hover:text-ink active:text-primary-soft';
+
+  var status = document.createElement('p');
+  status.className = 'sr-only';
+  status.setAttribute('aria-live', 'polite');
+
+  var timer = 0;
+
+  function render(copied) {
+    button.innerHTML = (copied ? ICON_CHECK : ICON_COPY) + '<span>' + (copied ? '¡Copiado!' : 'Copiar email') + '</span>';
+  }
+
+  function announce(message) {
+    // Clear first so a repeated message is announced again
+    status.textContent = '';
+    setTimeout(function () {
+      status.textContent = message;
+    }, 50);
+  }
+
+  button.addEventListener('click', function () {
+    navigator.clipboard.writeText(EMAIL).then(
+      function () {
+        render(true);
+        announce('Email copiado al portapapeles');
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          render(false);
+        }, 2000);
+      },
+      function () {
+        announce('No se pudo copiar, el email es ' + EMAIL);
+      }
+    );
+  });
+
+  render(false);
+  block.appendChild(button);
+  block.appendChild(status);
+})();
