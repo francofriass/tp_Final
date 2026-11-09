@@ -267,4 +267,47 @@
       color: var(--color-primary-soft);
     }
   }
+
+  /*
+   * One-time border glow on the contact block. The span is a static ring (masked to its
+   * 2px edge); the band inside it slides left to right using transform only.
+   */
+  .contact-shine {
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  }
+  .contact-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    background: linear-gradient(270deg, rgb(167 139 250 / 0.4), transparent);
+    transform: translateX(-100%);
+  }
+  .contact-block.is-shining .contact-shine::before {
+    animation: contact-shine 1.2s ease-in-out forwards;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .contact-block.is-shining .contact-shine::before {
+      animation: none;
+    }
+  }
+}
+
+@keyframes contact-shine {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
 }

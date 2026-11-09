@@ -162,3 +162,17 @@
   block.appendChild(button);
   block.appendChild(status);
 })();
+
+// Contact: border glow plays once, the first time the block enters the viewport.
+(function () {
+  var block = document.querySelector('.contact-block');
+  if (!block || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    if (!entries.some(function (entry) { return entry.isIntersecting; })) return;
+    block.classList.add('is-shining');
+    observer.disconnect();
+  }, { threshold: 0.3 });
+  observer.observe(block);
+})();
