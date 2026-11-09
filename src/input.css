@@ -76,6 +76,11 @@
     scroll-margin-top: var(--header-height);
   }
 
+  /* Programmatic focus target of the skip link: no ring */
+  main:focus {
+    outline: none;
+  }
+
   /* Visible keyboard focus on every interactive element */
   :focus-visible {
     outline: 2px solid var(--color-accent);

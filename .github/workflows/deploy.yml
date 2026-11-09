@@ -36,7 +36,7 @@ jobs:
       - name: Assemble site folder
         run: |
           mkdir _site
-          cp index.html caso-estudio.html 404.html _site/
+          cp index.html caso-estudio.html 404.html robots.txt sitemap.xml _site/
           cp -r assets _site/assets
 
       - name: Upload artifact
