@@ -116,12 +116,12 @@ Se testeó el prototipo en el celular con **3 personas**: 2 compañeros de la fa
 | 3 | 4/5 | 8 min 58 s (incluye card sorting) |
 
 **Cambios aplicados a partir del test** (aplicados en Figma, páginas 5 y 6, y en el código del sitio):
-1. **Chip "Caso de estudio":** en la tarjeta de Cubrí Seguros, "2026 · Caso de estudio" pasó de ser un texto simple a dos elementos: el año y un chip con la etiqueta. Así se distingue como etiqueta y se nota que ese proyecto tiene caso de estudio completo. <!-- FRANCO: completar el hallazgo del test que lo origina -->
+1. **Chip "Caso de estudio":** en la tarjeta de Cubrí Seguros, "2026 · Caso de estudio" pasó de ser un texto simple a dos elementos: el año y un chip con la etiqueta. Así se distingue como etiqueta y se nota que ese proyecto tiene caso de estudio completo. Hallazgo que lo originó: a un participante le costó encontrar el caso de estudio, por eso lo hice más visible.
 2. **Textos de los enlaces de proyecto:** "Ver proyecto →" pasó a decir "Ver demo →" en Coffea (lleva al sitio publicado) y "Ver código →" en Mesa de Ayuda (lleva al repositorio del equipo). Así el texto dice a dónde lleva cada enlace.
 
 **Hallazgos no aplicados:**
 - Unir "Sobre mí" y "Experiencia": fue una preferencia personal de un tester, no un problema de uso. Además, la consigna pide las secciones separadas.
-- Card sorting: lo hizo un solo tester y coincidió en parte con la arquitectura propuesta. La tarjeta con la palabra "badge" no se entendió. <!-- FRANCO: completar con la decisión tomada -->
+- Card sorting: lo hizo un solo tester y coincidió en parte con la arquitectura propuesta. La tarjeta con la palabra "badge" no se entendió. Decisión: no la modifiqué, porque "badge" es el nombre técnico del elemento y no aparece como texto en el sitio.
 
 El antes y después del Cambio 1 (desktop y mobile) está en Figma, página 7.
 
@@ -163,14 +163,16 @@ Las microinteracciones posteriores a la alta fidelidad (badge, capturas, retrato
 
 ### Lighthouse mobile (PageSpeed Insights)
 
-<!-- COMPLETAR con los puntajes reales después de medir la URL publicada -->
+Medido el 09/11/2026 sobre https://franco-frias-portfolio.netlify.app/ (modo Mobile).
 
 | Categoría | Puntaje |
 | --- | --- |
-| Performance | _completar_ |
-| Accessibility | _completar_ |
-| Best Practices | _completar_ |
-| SEO | _completar_ |
+| Performance | 100 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+Métricas: FCP 0,9 s · LCP 0,9 s · TBT 0 ms · CLS 0 · Speed Index 2,4 s.
 
 ## Créditos y recursos
 
@@ -179,7 +181,7 @@ Las microinteracciones posteriores a la alta fidelidad (badge, capturas, retrato
 - **Tipografías:** [Inter](https://fonts.google.com/specimen/Inter) y [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk), licencia OFL, instaladas con Fontsource.
 - **Estilos:** [Tailwind CSS](https://tailwindcss.com/).
 - **Imágenes:** capturas propias de cada proyecto y retrato propio.
-- **Mesa de Ayuda:** trabajo en equipo. El repositorio es de un compañero: [SantyStecklein/TPFinal-IS1](https://github.com/SantyStecklein/TPFinal-IS1). Mi parte: <!-- FRANCO: completar cuál fue tu parte --> _completar_.
+- **Mesa de Ayuda:** trabajo en equipo. El repositorio es de un compañero: [SantyStecklein/TPFinal-IS1](https://github.com/SantyStecklein/TPFinal-IS1). Mi parte: trabajo en equipo sin roles fijos. Todos participamos en todos los puntos: a veces yo empezaba uno y mi compañero lo corregía o lo completaba, y viceversa.
 
 ## Declaración de uso de IA
 
