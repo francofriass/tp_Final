@@ -34,7 +34,7 @@
   <body>
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
-        <!-- 1. HEADER / NAVEGACIÓN -->
+    <!-- 1. HEADER / NAVEGACIÓN -->
     <header class="sticky top-0 z-50 border-b border-white/[0.08] bg-bg">
       <nav
         class="container-page relative flex h-20 items-center justify-between md:h-[5.5rem]"
@@ -103,7 +103,7 @@
     </header>
 
 <main id="contenido">
-            <!-- 2. HERO -->
+      <!-- 2. HERO -->
       <section id="inicio" class="hero-glow pb-8 pt-12 md:pb-12 md:pt-[88px]" aria-labelledby="hero-title">
         <div class="container-page relative flex flex-col items-start gap-6">
           <p
@@ -277,18 +277,20 @@
         </div>
       </section>
 
-<!-- 4. SKILLS -->
+      <!-- 5. SKILLS -->
       <section id="skills" class="section-pad" aria-labelledby="skills-title">
         <div class="container-page">
-          <p class="eyebrow">Skills</p>
-          <h2 id="skills-title" class="section-title">Lo que sé hacer</h2>
-          <p class="section-lead">Del diseño de la interfaz a su implementación en código.</p>
+          <div class="section-head">
+            <p class="eyebrow">Skills</p>
+            <h2 id="skills-title" class="section-title">Lo que sé hacer</h2>
+            <p class="section-lead">Del diseño de la interfaz a su implementación en código.</p>
+          </div>
 
-          <div class="mt-10 grid gap-6 md:grid-cols-3">
-            <article class="card card-hover">
-              <h3 class="text-xl font-bold">Diseño UX/UI</h3>
-              <p class="mt-2 text-muted">Diseño de interfaces claras, partiendo de la estructura de la información.</p>
-              <ul class="mt-5 flex flex-wrap gap-2" aria-label="Herramientas de diseño UX/UI">
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="card flex flex-col gap-5">
+              <h3 class="text-2xl font-bold">Diseño UX/UI</h3>
+              <p class="text-base text-muted">Diseño de interfaces claras, partiendo de la estructura de la información.</p>
+              <ul class="flex flex-wrap gap-2" aria-label="Herramientas de diseño UX/UI">
                 <li class="chip">Figma</li>
                 <li class="chip">Prototipado</li>
                 <li class="chip">Wireframing</li>
@@ -296,10 +298,10 @@
               </ul>
             </article>
 
-            <article class="card card-hover">
-              <h3 class="text-xl font-bold">Desarrollo Front-End</h3>
-              <p class="mt-2 text-muted">Maquetado semántico, responsive y accesible, con código mantenible.</p>
-              <ul class="mt-5 flex flex-wrap gap-2" aria-label="Tecnologías de Front-End">
+            <article class="card flex flex-col gap-5">
+              <h3 class="text-2xl font-bold">Desarrollo Front-End</h3>
+              <p class="text-base text-muted">Maquetado semántico, responsive y accesible, con código mantenible.</p>
+              <ul class="flex flex-wrap gap-2" aria-label="Tecnologías de Front-End">
                 <li class="chip">HTML5</li>
                 <li class="chip">CSS3</li>
                 <li class="chip">Tailwind CSS</li>
@@ -307,10 +309,10 @@
               </ul>
             </article>
 
-            <article class="card card-hover">
-              <h3 class="text-xl font-bold">Herramientas</h3>
-              <p class="mt-2 text-muted">Flujo de trabajo para versionar, construir y publicar proyectos.</p>
-              <ul class="mt-5 flex flex-wrap gap-2" aria-label="Herramientas de trabajo">
+            <article class="card flex flex-col gap-5">
+              <h3 class="text-2xl font-bold">Herramientas</h3>
+              <p class="text-base text-muted">Flujo de trabajo para versionar, construir y publicar proyectos.</p>
+              <ul class="flex flex-wrap gap-2" aria-label="Herramientas de trabajo">
                 <li class="chip">Git</li>
                 <li class="chip">GitHub</li>
                 <li class="chip">VS Code</li>
