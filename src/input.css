@@ -255,4 +255,16 @@
       filter: drop-shadow(0 16px 24px rgb(124 58 237 / 0.25));
     }
   }
+
+  /* Skills chips: subtle color-only highlight on hover (not interactive, so no pointer cursor) */
+  #skills .chip {
+    cursor: default;
+    transition: border-color 200ms ease-out, color 200ms ease-out;
+  }
+  @media (hover: hover) {
+    #skills .chip:hover {
+      border-color: rgb(167 139 250 / 0.5);
+      color: var(--color-primary-soft);
+    }
+  }
 }
