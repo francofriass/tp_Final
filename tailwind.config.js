@@ -14,8 +14,8 @@ module.exports = {
         muted: '#94A3B8',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'Inter Fallback', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'Space Grotesk Fallback', 'Arial', 'sans-serif'],
       },
       // Spacing scale is the Tailwind default: multiples of 4px.
       maxWidth: {

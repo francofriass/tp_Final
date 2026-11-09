@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Self-hosted variable fonts (paths are relative to assets/css/styles.css) */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-latin-wght-normal.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../fonts/space-grotesk-latin-wght-normal.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Fallbacks with adjusted metrics to avoid layout shift while fonts load */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 107.12%;
+  ascent-override: 90.44%;
+  descent-override: 22.52%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Space Grotesk Fallback';
+  src: local('Arial');
+  size-adjust: 101.43%;
+  ascent-override: 97.01%;
+  descent-override: 28.79%;
+  line-gap-override: 0%;
+}
+
 /* ==========================================================================
    Design tokens (mirrors tailwind.config.js)
    Spacing scale: multiples of 4px. Max 2 font families: Inter + Space Grotesk.
@@ -43,9 +76,12 @@
   }
 
   h1,
-  h2,
-  h3 {
+  h2 {
     @apply font-display;
+  }
+
+  h3 {
+    @apply font-sans;
   }
 
   @media (prefers-reduced-motion: reduce) {
