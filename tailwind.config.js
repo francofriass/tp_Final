@@ -12,6 +12,7 @@ module.exports = {
         accent: '#38BDF8',
         ink: '#F8FAFC',
         muted: '#94A3B8',
+        success: '#34D399',
       },
       fontFamily: {
         sans: ['Inter', 'Inter Fallback', 'system-ui', 'sans-serif'],
