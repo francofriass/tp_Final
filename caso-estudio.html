@@ -39,16 +39,19 @@
   <body>
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-bg/80 backdrop-blur-md">
-      <nav class="container-page flex h-[4.5rem] items-center justify-between" aria-label="Navegación principal">
+    <header class="sticky top-0 z-50 border-b border-white/[0.08] bg-bg">
+      <nav
+        class="container-page flex h-20 items-center justify-between md:h-[5.5rem]"
+        aria-label="Navegación principal"
+      >
         <a
           href="index.html"
-          class="font-display text-2xl font-bold tracking-tight text-ink hover:text-accent"
-          aria-label="Franco Frías Maier, volver al portfolio"
+          class="rounded-lg font-display text-[32px] font-bold leading-none"
+          aria-label="Franco Frías Maier, ir al inicio"
         >
-          <span class="text-primary-soft">F</span>F
+          <span class="text-primary-soft" aria-hidden="true">F</span><span class="text-ink" aria-hidden="true">F</span>
         </a>
-        <a class="btn btn-secondary !min-h-[44px] !px-4 !py-2 text-sm" href="index.html#proyectos"
+        <a class="btn btn-secondary" href="index.html#proyectos"
           ><span aria-hidden="true">←</span> Volver a proyectos</a
         >
       </nav>
@@ -56,106 +59,125 @@
 
     <main id="contenido" tabindex="-1">
       <article class="section-pad">
-        <div class="container-page max-w-4xl">
-          <header>
-            <p class="eyebrow">Caso de estudio · 2026</p>
-            <h1 class="text-4xl font-bold leading-tight tracking-tight md:text-5xl">Cubrí Seguros</h1>
-            <p class="mt-4 text-lg text-muted md:text-xl">
+        <div class="container-page">
+          <header class="flex flex-col items-start gap-6">
+            <p class="eyebrow !mb-0">Caso de estudio · 2026</p>
+            <h1 class="font-display text-[60px] font-bold text-ink" style="line-height: 1.2">Cubrí Seguros</h1>
+            <p class="max-w-[760px] text-xl text-muted">
               Plataforma web para la visualización y gestión de pólizas de seguros.
             </p>
-            <ul class="mt-6 flex flex-wrap gap-2" aria-label="Herramientas usadas">
+            <ul class="flex flex-wrap gap-2" aria-label="Herramientas usadas">
               <li class="chip">HTML</li>
               <li class="chip">CSS</li>
               <li class="chip">JavaScript</li>
               <li class="chip">Netlify</li>
             </ul>
-            <p class="mt-6">
-              <a
-                class="btn btn-primary"
-                href="https://cubri-seguros-franco.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Ver sitio en vivo<span class="sr-only"> (se abre en una pestaña nueva)</span></a
-              >
-            </p>
+            <a class="btn btn-primary" href="https://cubri-seguros-franco.netlify.app/catalogo.html" target="_blank" rel="noopener noreferrer"
+              >Ver sitio en vivo<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+            >
           </header>
 
           <img
             src="assets/img/case-study-hero.webp"
-            alt="Mockup de la plataforma Cubrí Seguros (imagen provisoria)"
-            width="1200"
-            height="630"
-            class="mt-10 w-full rounded-2xl border border-white/10 object-cover"
+            alt="Captura de la página de inicio de Cubrí Seguros"
+            width="607"
+            height="339"
+            fetchpriority="high"
             decoding="async"
+            class="mt-10 w-full rounded-xl border border-white/10 object-cover"
           />
 
-          <div class="mt-12 grid gap-6 md:grid-cols-2">
-            <section class="card" aria-labelledby="problema-title">
-              <p class="eyebrow">01</p>
-              <h2 id="problema-title" class="text-2xl font-bold">Problema</h2>
-              <p class="mt-3 text-muted">
-                Dificultad de los usuarios para visualizar y entender las opciones de seguros de forma rápida y clara.
-              </p>
-            </section>
+          <dl class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class="card flex flex-col gap-2">
+              <dt class="text-base font-semibold text-ink">Año</dt>
+              <dd class="text-base text-muted">2026</dd>
+            </div>
+            <div class="card flex flex-col gap-2">
+              <dt class="text-base font-semibold text-ink">Contexto</dt>
+              <dd class="text-base text-muted">Trabajo práctico de la materia Diseño UX/UI</dd>
+            </div>
+            <div class="card flex flex-col gap-2">
+              <dt class="text-base font-semibold text-ink">Herramientas</dt>
+              <dd class="text-base text-muted">HTML, CSS, JavaScript, Netlify</dd>
+            </div>
+          </dl>
 
-            <section class="card" aria-labelledby="proceso-title">
-              <p class="eyebrow">02</p>
-              <h2 id="proceso-title" class="text-2xl font-bold">Proceso</h2>
-              <p class="mt-3 text-muted">
-                Diseño de interfaz centrada en la claridad de la información y maquetado responsivo para dispositivos
-                móviles.
-              </p>
-            </section>
-
-            <section class="card" aria-labelledby="solucion-title">
-              <p class="eyebrow">03</p>
-              <h2 id="solucion-title" class="text-2xl font-bold">Solución</h2>
-              <p class="mt-3 text-muted">
-                Una web intuitiva donde los usuarios pueden comparar los planes de seguros y contactar fácilmente.
-              </p>
-            </section>
-
-            <section class="card" aria-labelledby="resultado-title">
-              <p class="eyebrow">04</p>
-              <h2 id="resultado-title" class="text-2xl font-bold">Resultado</h2>
-              <p class="mt-3 text-muted">
-                Despliegue exitoso en Netlify, logrando una interfaz accesible y de carga rápida.
-              </p>
-            </section>
+          <div class="mt-12 flex flex-col gap-12 md:mt-16 md:gap-16">
+          <section class="max-w-[720px]" aria-labelledby="problema-title">
+            <p class="eyebrow">01</p>
+            <h2 id="problema-title" class="section-title">Problema</h2>
+            <p class="mt-3 text-xl text-muted">Dificultad de los usuarios para visualizar y entender las opciones de seguros de forma rápida y clara.</p>
+            <!-- FRANCO: ampliar con 2-3 líneas propias -->
+          </section>
+          <section class="max-w-[720px]" aria-labelledby="proceso-title">
+            <p class="eyebrow">02</p>
+            <h2 id="proceso-title" class="section-title">Proceso</h2>
+            <p class="mt-3 text-xl text-muted">Diseño de interfaz centrada en la claridad de la información y maquetado responsivo para dispositivos móviles.</p>
+            <!-- FRANCO: ampliar con 2-3 líneas propias -->
+          </section>
+          <section class="max-w-[720px]" aria-labelledby="solucion-title">
+            <p class="eyebrow">03</p>
+            <h2 id="solucion-title" class="section-title">Solución</h2>
+            <p class="mt-3 text-xl text-muted">Una web intuitiva donde los usuarios pueden comparar los planes de seguros y contactar fácilmente.</p>
+            <!-- FRANCO: ampliar con 2-3 líneas propias -->
+          </section>
+          <section class="max-w-[720px]" aria-labelledby="resultado-title">
+            <p class="eyebrow">04</p>
+            <h2 id="resultado-title" class="section-title">Resultado</h2>
+            <p class="mt-3 text-xl text-muted">Despliegue exitoso en Netlify, logrando una interfaz accesible y de carga rápida.</p>
+            <!-- FRANCO: ampliar con 2-3 líneas propias -->
+          </section>
           </div>
 
-          <p class="mt-12 text-center">
+          <div class="mt-12 flex flex-col gap-3 md:mt-16 md:flex-row">
             <a class="btn btn-secondary" href="index.html#proyectos"><span aria-hidden="true">←</span> Volver al portfolio</a>
-          </p>
+            <a class="btn btn-primary" href="https://cubri-seguros-franco.netlify.app/catalogo.html" target="_blank" rel="noopener noreferrer"
+              >Ver demo<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+            >
+          </div>
         </div>
       </article>
     </main>
 
-    <footer class="border-t border-white/10 py-10">
-      <div class="container-page flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p class="text-sm text-muted">© 2026 Franco Frías Maier. Todos los derechos reservados.</p>
-          <p class="mt-1 text-sm text-muted">Desarrollado con HTML/CSS</p>
+        <footer class="border-t border-white/10 pb-10 pt-8">
+      <div class="container-page flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+        <div class="flex flex-col gap-2">
+          <a
+            href="index.html"
+            class="mb-2 w-fit rounded-lg font-display text-[32px] font-bold leading-none"
+            aria-label="Franco Frías Maier, volver al inicio"
+          >
+            <span class="text-primary-soft" aria-hidden="true">F</span><span class="text-ink" aria-hidden="true">F</span>
+          </a>
+          <p class="text-base text-muted">© 2026 Franco Frías Maier. Todos los derechos reservados.</p>
+          <p class="text-base text-muted">Hecho con HTML, Tailwind CSS y JavaScript.</p>
         </div>
-        <nav aria-label="Navegación del pie de página">
-          <ul class="flex flex-wrap gap-x-2 gap-y-1">
-            <li><a class="nav-link" href="index.html#skills">Skills</a></li>
-            <li><a class="nav-link" href="index.html#proyectos">Proyectos</a></li>
-            <li><a class="nav-link" href="index.html#experiencia">Experiencia</a></li>
-            <li><a class="nav-link" href="index.html#sobre-mi">Sobre mí</a></li>
-            <li><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+
+        <div class="flex flex-col gap-6 md:items-end">
+          <nav aria-label="Navegación del pie de página">
+            <ul class="flex flex-wrap gap-x-6 md:justify-end">
+              <li><a class="nav-link !px-0" href="index.html#proyectos">Proyectos</a></li>
+              <li><a class="nav-link !px-0" href="index.html#skills">Skills</a></li>
+              <li><a class="nav-link !px-0" href="index.html#experiencia">Experiencia</a></li>
+              <li><a class="nav-link !px-0" href="index.html#sobre-mi">Sobre mí</a></li>
+              <li><a class="nav-link !px-0" href="index.html#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+          <ul class="flex gap-6 md:justify-end" aria-label="Redes sociales">
             <li>
-              <a
-                class="nav-link"
-                href="https://github.com/francofriass"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="nav-link !px-0" href="https://github.com/francofriass" target="_blank" rel="noopener noreferrer"
                 >GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span></a
               >
             </li>
+            <li>
+              <a class="nav-link !px-0" href="https://www.linkedin.com/in/franco-fr%C3%ADas-maier-2a9626436/" target="_blank" rel="noopener noreferrer"
+                >LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a
+              >
+            </li>
           </ul>
-        </nav>
+        </div>
       </div>
     </footer>
+
   </body>
 </html>
